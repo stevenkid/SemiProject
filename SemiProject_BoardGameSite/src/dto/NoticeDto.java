@@ -2,22 +2,22 @@ package dto;
 
 /*
 CREATE TABLE BG_NOTICE(
-	    SEQ NUMBER(8) PRIMARY KEY,            --½ÃÄö½º
-	    ID VARCHAR2(50) NOT NULL,             --¾ÆÀÌµð. ¿Ü·¡Å°
-	    WDATE DATE NOT NULL,                  --ÀÛ¼ºÀÏ
-	    TITLE VARCHAR2(200) NOT NULL,         --Á¦¸ñ
-	    CONTENT VARCHAR2(4000) NOT NULL,      --³»¿ë
-	    READCOUNT NUMBER(8) NOT NULL,         --Á¶È¸¼ö
-	    DEL NUMBER(1) NOT NULL                --»èÁ¦¿©ºÎ (0 : X / 1 : °èÁ¤ Å»Åð)
-	);
+    SEQ NUMBER(8) PRIMARY KEY,                --ì‹œí€€ìŠ¤
+    ID VARCHAR2(50) NOT NULL,                  --ì•„ì´ë””. ì™¸ëž˜í‚¤
+    WDATE DATE NOT NULL,                        --ìž‘ì„±ì¼
+    TITLE VARCHAR2(200) NOT NULL,             --ì œëª©
+    CONTENT VARCHAR2(4000) NOT NULL,      --ë‚´ìš©
+    READCOUNT NUMBER(8) NOT NULL,          --ì¡°íšŒìˆ˜
+    DEL NUMBER(1) NOT NULL                     --ì‚­ì œì—¬ë¶€ (0 : X / 1 : ê³„ì • íƒˆí‡´)
+);
 
-	CREATE SEQUENCE SEQ_BG_NOTICE
-	START WITH 1
-	INCREMENT BY 1;
+CREATE SEQUENCE SEQ_BG_NOTICE
+START WITH 1
+INCREMENT BY 1;
 
-	ALTER TABLE BG_NOTICE
-	ADD CONSTRAINT FK_BG_NOTICE_ID FOREIGN KEY(ID)
-	REFERENCES BG_MEMBER(ID);
+ALTER TABLE BG_NOTICE
+ADD CONSTRAINT FK_BG_NOTICE_ID FOREIGN KEY(ID)
+REFERENCES BG_MEMBER(ID);
 */
 public class NoticeDto {
 
