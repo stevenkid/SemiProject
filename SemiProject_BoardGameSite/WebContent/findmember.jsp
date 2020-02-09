@@ -4,22 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>아이디 찾기</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-
 <%-- GNB --%>
 <div id="gnb"></div>
 <script type="text/javascript">
 $(function () {
 	$("#gnb").load("./GNB/gnb.jsp");
-})
+});
 </script>
 
 <%--페이지 시작. --%>
-<h1>QNA 페이지</h1>
-
 
 
 

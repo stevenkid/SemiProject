@@ -2,16 +2,16 @@ package dto;
 
 /*
 CREATE TABLE BG_MEMBER(
-	SEQ NUMBER(8) UNIQUE NOT NULL,             --½ÃÄö½º. Á¤·Ä¿ë.
-	ID VARCHAR2(50) PRIMARY KEY,               --¾ÆÀÌµğ
-    PW VARCHAR2(50) NOT NULL,                  --ÆĞ½º¿öµå
-    CALL_NUMBER VARCHAR2(50) UNIQUE NOT NULL,  --ÀüÈ­¹øÈ£.
-    NAME VARCHAR2(50) NOT NULL,                --ÀÌ¸§
-    EMAIL VARCHAR2(100) NOT NULL,              --ÀÌ¸ŞÀÏ
-    BONUSCREDIT NUMBER(8) NOT NULL,            --¸¶ÀÏ¸®Áö
-    REGDATE DATE NOT NULL,                     --°¡ÀÔ³¯Â¥
-    AUTH NUMBER(2) NOT NULL,                   --±ÇÇÑ (0 : »ç¿ëÀÚ / 1 : °ü¸®ÀÚ)
-    DEL NUMBER(1) NOT NULL                     --»èÁ¦ ¿©ºÎ (0 : X / 1 : °èÁ¤ Å»Åğ)
+	SEQ NUMBER(8) UNIQUE NOT NULL,                     --ì‹œí€€ìŠ¤. ì •ë ¬ìš©.
+	ID VARCHAR2(50) PRIMARY KEY,                        --ì•„ì´ë””
+    PW VARCHAR2(50) NOT NULL,                           --íŒ¨ìŠ¤ì›Œë“œ
+    CALL_NUMBER VARCHAR2(50) UNIQUE NOT NULL,  		--ì „í™”ë²ˆí˜¸.
+    NAME VARCHAR2(50) NOT NULL,                       --ì´ë¦„
+    EMAIL VARCHAR2(100) NOT NULL,                      --ì´ë©”ì¼
+    BONUSCREDIT NUMBER(8) NOT NULL,                  --ë§ˆì¼ë¦¬ì§€
+    REGDATE DATE NOT NULL,                                --ê°€ì…ë‚ ì§œ
+    AUTH NUMBER(2) NOT NULL,                             --ê¶Œí•œ (0 : ì‚¬ìš©ì / 1 : ê´€ë¦¬ì)
+    DEL NUMBER(1) NOT NULL                               --ì‚­ì œ ì—¬ë¶€ (0 : X / 1 : ê³„ì • íƒˆí‡´)
 );
     
 CREATE SEQUENCE SEQ_BG_MEMBER
@@ -52,6 +52,19 @@ public class MemberDto {
 		this.del = del;
 	}
 
+	public MemberDto(String id, String pw, String call_number, String name, String email, int bonuscredit,
+			String regdate, int auth, int del) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.call_number = call_number;
+		this.name = name;
+		this.email = email;
+		this.bonuscredit = bonuscredit;
+		this.regdate = regdate;
+		this.auth = auth;
+		this.del = del;
+	}
 
 	public int getSeq() {
 		return seq;
