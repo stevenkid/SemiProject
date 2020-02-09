@@ -2,16 +2,16 @@ package dto;
 
 /*
 CREATE TABLE BG_MEMBER(
-	SEQ NUMBER(8) UNIQUE NOT NULL,             --½ÃÄö½º. Á¤·Ä¿ë.
-	ID VARCHAR2(50) PRIMARY KEY,               --¾ÆÀÌµð
-    PW VARCHAR2(50) NOT NULL,                  --ÆÐ½º¿öµå
-    CALL_NUMBER VARCHAR2(50) UNIQUE NOT NULL,  --ÀüÈ­¹øÈ£.
-    NAME VARCHAR2(50) NOT NULL,                --ÀÌ¸§
-    EMAIL VARCHAR2(100) NOT NULL,              --ÀÌ¸ÞÀÏ
-    BONUSCREDIT NUMBER(8) NOT NULL,            --¸¶ÀÏ¸®Áö
-    REGDATE DATE NOT NULL,                     --°¡ÀÔ³¯Â¥
-    AUTH NUMBER(2) NOT NULL,                   --±ÇÇÑ (0 : »ç¿ëÀÚ / 1 : °ü¸®ÀÚ)
-    DEL NUMBER(1) NOT NULL                     --»èÁ¦ ¿©ºÎ (0 : X / 1 : °èÁ¤ Å»Åð)
+	SEQ NUMBER(8) UNIQUE NOT NULL,                     --ì‹œí€€ìŠ¤. ì •ë ¬ìš©.
+	ID VARCHAR2(50) PRIMARY KEY,                        --ì•„ì´ë””
+    PW VARCHAR2(50) NOT NULL,                           --íŒ¨ìŠ¤ì›Œë“œ
+    CALL_NUMBER VARCHAR2(50) UNIQUE NOT NULL,  		--ì „í™”ë²ˆí˜¸.
+    NAME VARCHAR2(50) NOT NULL,                       --ì´ë¦„
+    EMAIL VARCHAR2(100) NOT NULL,                      --ì´ë©”ì¼
+    BONUSCREDIT NUMBER(8) NOT NULL,                  --ë§ˆì¼ë¦¬ì§€
+    REGDATE DATE NOT NULL,                                --ê°€ìž…ë‚ ì§œ
+    AUTH NUMBER(2) NOT NULL,                             --ê¶Œí•œ (0 : ì‚¬ìš©ìž / 1 : ê´€ë¦¬ìž)
+    DEL NUMBER(1) NOT NULL                               --ì‚­ì œ ì—¬ë¶€ (0 : X / 1 : ê³„ì • íƒˆí‡´)
 );
     
 CREATE SEQUENCE SEQ_BG_MEMBER
