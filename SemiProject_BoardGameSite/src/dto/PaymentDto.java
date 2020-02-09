@@ -2,12 +2,12 @@ package dto;
 
 /*
 CREATE TABLE  BG_PAYMENT_RECORD(
-    SEQ NUMBER(8) PRIMARY KEY,                --ì‹œí€€ìŠ¤
-    ID VARCHAR2(50) NOT NULL,                  --ì•„ì´ë””. ì™¸ëž˜í‚¤
-    USETIME NUMBER(4) NOT NULL,              --ì‚¬ìš©ì‹œê°„ (ë¶„ë‹¨ìœ„ë¡œ ì¸¡ì •)
-    USEDATE DATE NOT NULL,                      --ì´ìš©ë‚ ìž
-    PRICE NUMBER(8) NOT NULL,                  --ì´ ê°€ê²©
-    BONUSCREDIT NUMBER(8) NOT NULL      -- ì´ ê²°ì œë¡œ ë§ˆì¼ë¦¬ì§€ê°€ ì–¼ë§ˆë‚˜ ì ìš©ë˜ëŠ”ì§€.
+    SEQ NUMBER(8) PRIMARY KEY,          --½ÃÄö½º
+    ID VARCHAR2(50) NOT NULL,           --¾ÆÀÌµð. ¿Ü·¡Å°
+    USETIME NUMBER(4) NOT NULL,         --»ç¿ë½Ã°£ (ºÐ´ÜÀ§·Î ÃøÁ¤)
+    USEDATE DATE NOT NULL,              --ÀÌ¿ë³¯ÀÚ
+    PRICE NUMBER(8) NOT NULL,           --ÃÑ °¡°Ý
+    BONUSCREDIT NUMBER(8) NOT NULL      --ÀÌ °áÁ¦·Î ¸¶ÀÏ¸®Áö°¡ ¾ó¸¶³ª Àû¿ëµÇ´ÂÁö.
 );
 
 CREATE SEQUENCE SEQ_BG_PAYMENT_RECORD

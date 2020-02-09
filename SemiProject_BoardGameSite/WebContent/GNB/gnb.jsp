@@ -14,7 +14,7 @@
 			<th><a href="./main.jsp">로고</a></th>
 			<th><a href="./notice.jsp">공지</a></th>
 			<th><a href="./gameList.jsp">게임목록</a></th>
-			<th><a href="./resetvation.jsp">예약</a></th>
+			<th><a href="./reservation.jsp">예약</a></th>
 			<th><a href="./epilogue.jsp">후기</a></th>
 			<th><a href="./map.jsp">위치</a></th>
 			<th><a href="./qna.jsp">Q&A</a></th>

@@ -2,15 +2,15 @@ package dto;
 
 /*
 CREATE TABLE BG_QNA(
-    SEQ NUMBER(8) PRIMARY KEY,                --ì‹œí€€ìŠ¤
-    ID VARCHAR2(50) NOT NULL,                  --ì•„ì´ë””. ì™¸ëž˜í‚¤
-    WDATE DATE NOT NULL,                        --ìž‘ì„±ì¼
-    TITLE VARCHAR2(200) NOT NULL,             --ì œëª©
-    CONTENT VARCHAR2(4000) NOT NULL,      --ë‚´ìš©
-    READCOUNT NUMBER(8) NOT NULL,          --ì¡°íšŒìˆ˜
-    IS_SECRET NUMBER(1) NOT NULL,             --ë¹„ë°€ê¸€ ì—¬ë¶€ (0 : ì•„ë‹˜ / 1 : ë¹„ë°€ê¸€)
-    THIS_PASSWORD VARCHAR2(50),               --ë¹„ë°€ê¸€ì¼ë•Œ íŒ¨ìŠ¤ì›Œë“œ
-    DEL NUMBER(1) NOT NULL                     --ì‚­ì œì—¬ë¶€ (0 : X / 1 : ê³„ì • íƒˆí‡´)
+    SEQ NUMBER(8) PRIMARY KEY,            --½ÃÄö½º
+    ID VARCHAR2(50) NOT NULL,             --¾ÆÀÌµð. ¿Ü·¡Å°
+    WDATE DATE NOT NULL,                  --ÀÛ¼ºÀÏ
+    TITLE VARCHAR2(200) NOT NULL,         --Á¦¸ñ
+    CONTENT VARCHAR2(4000) NOT NULL,      --³»¿ë
+    READCOUNT NUMBER(8) NOT NULL,         --Á¶È¸¼ö
+    IS_SECRET NUMBER(1) NOT NULL,         --ºñ¹Ð±Û ¿©ºÎ (0 : ¾Æ´Ô / 1 : ºñ¹Ð±Û)
+    THIS_PASSWORD VARCHAR2(50),           --ºñ¹Ð±ÛÀÏ¶§ ÆÐ½º¿öµå
+    DEL NUMBER(1) NOT NULL                --»èÁ¦¿©ºÎ (0 : X / 1 : °èÁ¤ Å»Åð)
 );
 
 CREATE SEQUENCE SEQ_BG_QNA

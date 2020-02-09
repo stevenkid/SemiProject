@@ -1,29 +1,29 @@
 package dto;
 
 /*
-CREATE TABLE BG_RESERVATION(
-    SEQ NUMBER(8) PRIMARY KEY,                --시퀀스
-    ID VARCHAR2(50) NOT NULL,                  --아이디. 외래키
-    WDATE DATE NOT NULL,                        --예약을 작성한 날짜   
-    RDATE DATE NOT NULL,                         --예약날짜 년도, 월, 일까지만 꺼내올 수 있으면 된다.
-    STARTTIME NUMBER(2) NOT NULL,            --해당 날짜의 예약 시작 시간.
-    ENDTIME NUMBER(2) NOT NULL,               --해당 날짜 예약 종료 시간
-    TABLENUMBER NUMBER(4),                      --예약한 테이블 번호. 외래키.
-    MEMO VARCHAR2(500) NOT NULL,            --짤막하게 요청하는 메모
-    NUMBERPEOPLE NUMBER(4) NOT NULL,      --예약한 인원수.
-    DEL NUMBER(1) NOT NULL                     --삭제여부 (0 : X / 1 : 계정 탈퇴 (예약 취소 or 기간 초과)
+CREATE TABLE BG_RESERVAITON(
+    SEQ NUMBER(8) PRIMARY KEY,            --������
+    ID VARCHAR2(50) NOT NULL,             --���̵�. �ܷ�Ű
+    WDATE DATE NOT NULL,                  --������ �ۼ��� ��¥   
+    RDATE DATE NOT NULL,                  --���೯¥ �⵵, ��, �ϱ����� ������ �� ������ �ȴ�.
+    STARTTIME NUMBER(2) NOT NULL,         --�ش� ��¥�� ���� ���� �ð�.
+    ENDTIME NUMBER(2) NOT NULL,           --�ش� ��¥ ���� ���� �ð�
+    TABLENUMBER NUMBER(4),                --������ ���̺� ��ȣ. �ܷ�Ű.
+    MEMO VARCHAR2(500) NOT NULL,          --©���ϰ� ��û�ϴ� �޸�
+    NUMBERPEOPLE NUMBER(4) NOT NULL,      --������ �ο���.
+    DEL NUMBER(1) NOT NULL                --�������� (0 : X / 1 : ���� Ż�� (���� ��� or �Ⱓ �ʰ�)
 );
 
-CREATE SEQUENCE SEQ_BG_RESERVATION
+CREATE SEQUENCE SEQ_BG_RESERVAITON
 START WITH 1
 INCREMENT BY 1;
 
-ALTER TABLE BG_RESERVATION
-ADD CONSTRAINT FK_BG_RESERVATION_ID FOREIGN KEY(ID)
+ALTER TABLE BG_RESERVAITON
+ADD CONSTRAINT FK_BG_RESERVAITON_ID FOREIGN KEY(ID)
 REFERENCES BG_MEMBER(ID);
 
-ALTER TABLE BG_RESERVATION
-ADD CONSTRAINT FK_BG_RESERVATION_TABLENUMBER FOREIGN KEY(TABLENUMBER)
+ALTER TABLE BG_RESERVAITON
+ADD CONSTRAINT FK_BG_RESERVAITON_TABLENUMBER FOREIGN KEY(TABLENUMBER)
 REFERENCES BG_TABLE(TABLENUMBER);
 */
 public class ReservationDto {
