@@ -38,6 +38,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet"
+   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet"
+   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script
+   src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
@@ -49,9 +61,10 @@ $(function () {
 	$("#gnb").load("./GNB/gnb.jsp");
 })
 </script>
+<br><br>
 
 <%--페이지 시작. --%>
-<h1>공지사항 페이지</h1>
+<h1 align = "center">공지사항</h1>
 
 
 <%
@@ -79,18 +92,18 @@ if(length % 10 > 0) {
 
 
 
-<div align = "center">
+<div align = "center" style = "padding-left:100px; padding-right:100px">
 <br><br><br><br>
-<table border = "1" style = "border-collapse:collapse">
-	<col width = "70"> <col width = "600"> <col width = "150"> <col width = "150"> <col width = "80">
+<table border = "1" style = "border-collapse:collapse" class="table table-striped">
+	<col width = "70"> <col width = "600"> <col width = "90"> <col width = "90"> <col width = "50">
 	
 	
 	<tr>
-		<th></th>		<!-- 번호인데 일부러 비워놔따 -->
-		<th> 제목 </th>
-		<th> 작성자 </th>
-		<th> 작성일 </th>
-		<th> 조회수 </th>
+		<th scope="col" style = "text-align:center"></th>		<!-- 번호인데 일부러 비워놔따 -->
+		<th scope="col" style = "text-align:center"> 제목 </th>
+		<th scope="col" style = "text-align:center"> 작성자 </th>
+		<th scope="col" style = "text-align:center"> 작성일 </th>
+		<th scope="col" style = "text-align:center"> 조회수 </th>
 	</tr>
 	
 	
@@ -101,7 +114,7 @@ if(length % 10 > 0) {
 	%>
 	
 	<tr>
-		<td colspan = "3"> 작성된 공지사항이 없습니다. </td>
+		<td colspan = "5" style = "text-align : center"> 작성된 공지사항이 없습니다. </td>
 	</tr>
 	
 	
@@ -160,6 +173,7 @@ if(length % 10 > 0) {
 		}
 	%>
 	<br>
+	<br> <a href = "noticeWrite.jsp?type=write"> 글쓰기 </a>
 </div>
 
 </body>

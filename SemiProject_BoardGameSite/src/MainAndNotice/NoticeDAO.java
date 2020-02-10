@@ -301,7 +301,7 @@ public class NoticeDAO {
 	String sql = " SELECT SEQ, ID, WDATE, TITLE, CONTENT, READCOUNT, DEL "
 			+ " FROM ";
 	
-		   sql += "(SELECT ROW_NUMBER()OVER (ORDER BY SEQ ASC) AS RNUM, "
+		   sql += "(SELECT ROW_NUMBER()OVER(ORDER BY SEQ ASC) AS RNUM, "
 		   		+ "			SEQ, ID, WDATE, TITLE, CONTENT, READCOUNT, DEL "
 		   		+ " FROM BG_NOTICE ";
 		   
@@ -316,7 +316,7 @@ public class NoticeDAO {
 	}
 	sql += sqlWord;
 	
-	sql += " ORDER BY SEQ ASC ";
+	sql += " ORDER BY SEQ ASC )";
 	sql += " WHERE RNUM >= ? AND RNUM <= ? ";
 	
 	Connection conn = null;

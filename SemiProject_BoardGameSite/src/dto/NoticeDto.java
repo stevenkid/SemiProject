@@ -2,22 +2,22 @@ package dto;
 
 /*
 CREATE TABLE BG_NOTICE(
-    SEQ NUMBER(8) PRIMARY KEY,                --ÏãúÌÄÄÏä§
-    ID VARCHAR2(50) NOT NULL,                  --ÏïÑÏù¥Îîî. Ïô∏ÎûòÌÇ§
-    WDATE DATE NOT NULL,                        --ÏûëÏÑ±Ïùº
-    TITLE VARCHAR2(200) NOT NULL,             --Ï†úÎ™©
-    CONTENT VARCHAR2(4000) NOT NULL,      --ÎÇ¥Ïö©
-    READCOUNT NUMBER(8) NOT NULL,          --Ï°∞ÌöåÏàò
-    DEL NUMBER(1) NOT NULL                     --ÏÇ≠Ï†úÏó¨Î∂Ä (0 : X / 1 : Í≥ÑÏ†ï ÌÉàÌá¥)
-);
+	    SEQ NUMBER(8) PRIMARY KEY,            --Ω√ƒˆΩ∫
+	    ID VARCHAR2(50) NOT NULL,             --æ∆¿Ãµ. ø‹∑°≈∞
+	    WDATE DATE NOT NULL,                  --¿€º∫¿œ
+	    TITLE VARCHAR2(200) NOT NULL,         --¡¶∏Ò
+	    CONTENT VARCHAR2(4000) NOT NULL,      --≥ªøÎ
+	    READCOUNT NUMBER(8) NOT NULL,         --¡∂»∏ºˆ
+	    DEL NUMBER(1) NOT NULL                --ªË¡¶ø©∫Œ (0 : X / 1 : ∞Ë¡§ ≈ª≈)
+	);
 
-CREATE SEQUENCE SEQ_BG_NOTICE
-START WITH 1
-INCREMENT BY 1;
+	CREATE SEQUENCE SEQ_BG_NOTICE
+	START WITH 1
+	INCREMENT BY 1;
 
-ALTER TABLE BG_NOTICE
-ADD CONSTRAINT FK_BG_NOTICE_ID FOREIGN KEY(ID)
-REFERENCES BG_MEMBER(ID);
+	ALTER TABLE BG_NOTICE
+	ADD CONSTRAINT FK_BG_NOTICE_ID FOREIGN KEY(ID)
+	REFERENCES BG_MEMBER(ID);
 */
 public class NoticeDto {
 
@@ -44,6 +44,13 @@ public class NoticeDto {
 		this.content = content;
 		this.readCount = readcount;
 		this.del = del;
+	}
+
+
+	public NoticeDto(String id, String title, String content) {
+		this.id=id;
+		this.title=title;
+		this.content=content;
 	}
 
 

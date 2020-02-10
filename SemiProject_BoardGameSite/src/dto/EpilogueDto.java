@@ -9,10 +9,12 @@ CREATE TABLE BG_EPILOGUE(
 	DEPTH NUMBER(8) NOT NULL,
     THUMBNAIL VARCHAR2(200) NOT NULL,     
     TITLE VARCHAR2(200) NOT NULL,  
-    CONTENT VARCHAR2(4000) NOT NULL, 
+    PCONTENT VARCHAR2(4000) NOT NULL,
+    TCONTENT VARCHAR2(200) NOT NULL,
+    FILENAME VARCHAR2(50) NOT NULL,
     WDATE DATE NOT NULL, 
     DEL NUMBER(1) NOT NULL,
-    READCOUNT NUMBER(8) NOT NULL                     
+    READCOUNT NUMBER(8) NOT NULL
 );
 
 CREATE SEQUENCE SEQ_BG_EPILOGUE
@@ -27,34 +29,30 @@ REFERENCES BG_MEMBER(ID);
 public class EpilogueDto {
 
 	private int seq;
-	private String id;	// 작성자
+	private String id;	// 아이디
 	
-	private int ref;	// 그룹번호
-	private int step;	// 행(row) 번호
+	private int ref;	// 참조
+	private int step;	// (row) 스탭
 	private int depth;	// 깊이
 	
-	private String thumbnail;
+	private String thumbnail;	//썸네일.
 	
 	private String title;
-	private String content;
+	private String pcontent;
+	private String tcontent;
+	private String filename;
 	private String wdate;	// 작성일
 	
 	private int del;
 	private int readcount;
 	
+	
 	public EpilogueDto() {
-		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	public EpilogueDto(String id, String title, String content) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.content = content;
-	}
-
-	public EpilogueDto(int seq, String id, int ref, int step, int depth, String thumbnail, String title, String content,
-			String wdate, int del, int readcount) {
+	public EpilogueDto(int seq, String id, int ref, int step, int depth, String thumbnail, String title,
+			String pcontent, String tcontent, String filename, String wdate, int del, int readcount) {
 		super();
 		this.seq = seq;
 		this.id = id;
@@ -63,18 +61,12 @@ public class EpilogueDto {
 		this.depth = depth;
 		this.thumbnail = thumbnail;
 		this.title = title;
-		this.content = content;
+		this.pcontent = pcontent;
+		this.tcontent = tcontent;
+		this.filename = filename;
 		this.wdate = wdate;
 		this.del = del;
 		this.readcount = readcount;
-	}
-	
-
-	@Override
-	public String toString() {
-		return "EpilogueDto [seq=" + seq + ", id=" + id + ", ref=" + ref + ", step=" + step + ", depth=" + depth
-				+ ", thumbnail=" + thumbnail + ", title=" + title + ", content=" + content + ", wdate=" + wdate
-				+ ", del=" + del + ", readcount=" + readcount + "]";
 	}
 
 	public int getSeq() {
@@ -133,12 +125,28 @@ public class EpilogueDto {
 		this.title = title;
 	}
 
-	public String getContent() {
-		return content;
+	public String getPcontent() {
+		return pcontent;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setPcontent(String pcontent) {
+		this.pcontent = pcontent;
+	}
+
+	public String getTcontent() {
+		return tcontent;
+	}
+
+	public void setTcontent(String tcontent) {
+		this.tcontent = tcontent;
+	}
+
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 
 	public String getWdate() {
@@ -164,6 +172,7 @@ public class EpilogueDto {
 	public void setReadcount(int readcount) {
 		this.readcount = readcount;
 	}
+	
 	
 }
 

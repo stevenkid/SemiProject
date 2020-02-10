@@ -2,9 +2,9 @@ package dto;
 
 /*
 CREATE TABLE  BG_TABLE(
-    TABLENUMBER NUMBER(4) PRIMARY KEY,     --í…Œì´ë¸” ë²ˆí˜¸
-    NUMBERPEOPLE NUMBER(4) NOT NULL,        --ìµœëŒ€ ì´ìš© ê°€ëŠ¥ ì¸ì›ìˆ˜
-    ISRESERVAITONTABLE NUMBER(1) NOT NULL  --ì˜ˆì•½ì „ìš© í…Œì´ë¸”ì¸ê°€? (0 : ì•„ë‹˜ / 1 : ë§žìŒ)
+    TABLENUMBER NUMBER(4) PRIMARY KEY,     --Å×ÀÌºí ¹øÈ£
+    NUMBERPEOPLE NUMBER(4) NOT NULL,       --ÃÖ´ë ÀÌ¿ë °¡´É ÀÎ¿ø¼ö
+    ISRESERVAITONTABLE NUMBER(1) NOT NULL  --¿¹¾àÀü¿ë Å×ÀÌºíÀÎ°¡? (0 : ¾Æ´Ô / 1 : ¸ÂÀ½)
 );
 */
 public class TableDto {

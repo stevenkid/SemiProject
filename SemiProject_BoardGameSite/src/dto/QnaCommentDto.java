@@ -2,12 +2,12 @@ package dto;
 
 /*
 CREATE TABLE BG_QNA_COMMENTS(
-    SEQ NUMBER(8) PRIMARY KEY,                --ì‹œí€€ìŠ¤
-    ID VARCHAR2(50) NOT NULL,                  --ì•„ì´ë””. ì™¸ëž˜í‚¤ í•´ë‹¹ ìœ ì €ê°€ ê´€ë¦¬ìžì¸ì§€ ìœ ì €ì¸ì§€ ì°¾ì•„ë‚¼ ê²ƒ.
-    WDATE DATE NOT NULL,                        --ìž‘ì„± ë‚ ì§œ   
-    QNANUMBER NUMBER(8) NOT NULL,         --QNA í…Œì´ë¸”ì˜ ì–´ë–¤ ê¸€ì— ëŒ“ê¸€ì¸ì§€. ì™¸ëž˜í‚¤
-    CONTENT VARCHAR2(500) NOT NULL,        --ëŒ“ê¸€ ë‚´ìš©.
-    DEL NUMBER(1) NOT NULL                     --ì‚­ì œì—¬ë¶€ (0 : X / 1 : ì‚­ì œ)
+    SEQ NUMBER(8) PRIMARY KEY,            --½ÃÄö½º
+    ID VARCHAR2(50) NOT NULL,             --¾ÆÀÌµð. ¿Ü·¡Å° ÇØ´ç À¯Àú°¡ °ü¸®ÀÚÀÎÁö À¯ÀúÀÎÁö Ã£¾Æ³¾ °Í.
+    WDATE DATE NOT NULL,                  --ÀÛ¼º ³¯Â¥   
+    QNANUMBER NUMBER(8) NOT NULL,         --QNA Å×ÀÌºíÀÇ ¾î¶² ±Û¿¡ ´ñ±ÛÀÎÁö. ¿Ü·¡Å°
+    CONTENT VARCHAR2(500) NOT NULL,       --´ñ±Û ³»¿ë.
+    DEL NUMBER(1) NOT NULL                --»èÁ¦¿©ºÎ (0 : X / 1 : »èÁ¦)
 );
 
 CREATE SEQUENCE SEQ_BG_QNA_COMMENTS
