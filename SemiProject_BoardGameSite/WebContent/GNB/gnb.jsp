@@ -17,7 +17,7 @@
 			<th><a href="./resetvation.jsp">예약</a></th>
 			<th><a href="./epilogue.jsp">후기</a></th>
 			<th><a href="./map.jsp">위치</a></th>
-			<th><a href="./qna.jsp">Q&A</a></th>
+			<th><a href="qnaList">Q&A</a></th>
 			<th><a href="./admin.jsp">관리자</a></th>
 			<th><a href="./login.jsp">로그인</a></th>
 		</tr>
