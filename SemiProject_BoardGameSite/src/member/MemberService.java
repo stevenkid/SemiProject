@@ -12,4 +12,12 @@ public class MemberService {
 	}
 	
 	
+	public MemberDto login(String id, String pw) {
+		
+		return dao.login(id, pw);
+	}
+	
+	public boolean idCheck(String id) {
+		return dao.idCheck(id);
+	}
 }

@@ -20,50 +20,19 @@ private static MemberDao dao = new MemberDao();
 	public static MemberDao getInstance() {
 		return dao;
 	}
-	public static boolean test() {
-		String sql = " SELECT * " 
-				+ " FROM TTTTT ";
-		
-		Connection conn = null;
-		PreparedStatement psmt = null;
-		ResultSet rs = null;
-		
-		try {
-			conn = DBConnection.getConnection();
-			System.out.println("1/6 login success!");
-			psmt = conn.prepareStatement(sql);
-			System.out.println("2/6 login success!");
-
-			rs = psmt.executeQuery();
-			System.out.println("3/6 login success!");
-			while(rs.next()) {
-				int i = 1;
-				System.out.println(rs.getString(i++));
-				System.out.println(rs.getString(i++));
-			}
-			System.out.println("4/6 login success!");
-		} catch (SQLException e) {
-			System.out.println("login fail!");
-			e.printStackTrace();
-		} finally {
-			DBClose.close(psmt, conn, null);
-		}
-		return true;
-	}
-		
 		
 	
-	
-	public MemberDto logIn(String id, String pw) {
-		String sql = " SELECT SEQ, ID, PW, CALL_NUMBER, NAME, EMAIL, BONUSCREDIT, RAGDATE, AUTH, DEL " 
+	public MemberDto login(String id, String pw) {
+		String sql = " SELECT SEQ, ID, PW, CALL_NUMBER, NAME, EMAIL, BONUSCREDIT, REGDATE, AUTH, DEL " 
 				+ " FROM BG_MEMBER "
-				+ " WHERE ID=?, PW=? ";
+				+ " WHERE ID=? AND PW=? ";
 		
 		Connection conn = null;
 		PreparedStatement psmt = null;
 		ResultSet rs = null;
 		MemberDto memDto = null;
 		
+		System.out.println(sql);
 		try {
 			conn = DBConnection.getConnection();
 			System.out.println("1/6 login success!");
@@ -128,7 +97,67 @@ private static MemberDao dao = new MemberDao();
 		return count > 0 ? true:false; 
 	}
 	
+	public boolean idCheck(String id) {
+		
+		String sql = " SELECT ID"
+				+ " FROM BG_MEMBER "
+				+ " WHERE ID=? ";
+		
+		Connection conn = null;
+		PreparedStatement psmt = null;
+		ResultSet rs = null;
+		int result = 0;
+		
+		try {
+			conn = DBConnection.getConnection();
+			System.out.println("1/6 idCheck success!");
+			psmt = conn.prepareStatement(sql);
+			System.out.println("2/6 idCheck success!");
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+
+			while(rs.next()) {
+				result = 1;
+			}
+			System.out.println("3/6 idCheck success!");
+		} catch (SQLException e) {
+			System.out.println("idCheck fail!");
+			e.printStackTrace();
+		}finally {
+			DBClose.close(psmt, conn, rs);
+		}
+		return result > 0? true:false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

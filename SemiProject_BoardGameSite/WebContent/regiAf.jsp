@@ -15,7 +15,7 @@
 
 <script type="text/javascript">
 setTimeout(function() {
-	 location.href="login";
+	 location.href="login?command=login";
 	}, 3000);
 
 </script>

@@ -39,6 +39,7 @@ public class AddMemberServ extends HttpServlet {
 			String name = req.getParameter("name");
 			String call_number = req.getParameter("call_number");
 			String email = req.getParameter("emailFront")+ "@" + req.getParameter("emailBack");
+			System.out.println(id);
 			System.out.println(email);
 			System.out.println("비밀번호"+pwd);
 			MemberDto dto = new MemberDto(id, pwd, call_number, name, email, 0, " ", 0, 0);

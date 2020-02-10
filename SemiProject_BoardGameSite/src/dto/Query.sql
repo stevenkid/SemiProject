@@ -1,10 +1,9 @@
 --사용자 테이블 -> BG_MEMBER
-<<<<<<< HEAD
+
+SELECT * 
+FROM BG_MEMBER;
 
 
-
-=======
->>>>>>> Sub_Master
 DROP TABLE BG_MEMBER
 CASCADE CONSTRAINTS;
 
