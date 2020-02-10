@@ -52,6 +52,19 @@ public class MemberDto {
 		this.del = del;
 	}
 
+	public MemberDto(String id, String pw, String call_number, String name, String email, int bonuscredit,
+			String regdate, int auth, int del) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.call_number = call_number;
+		this.name = name;
+		this.email = email;
+		this.bonuscredit = bonuscredit;
+		this.regdate = regdate;
+		this.auth = auth;
+		this.del = del;
+	}
 
 	public int getSeq() {
 		return seq;
@@ -150,6 +163,14 @@ public class MemberDto {
 
 	public void setDel(int del) {
 		this.del = del;
+	}
+
+
+	@Override
+	public String toString() {
+		return "MemberDto [seq=" + seq + ", id=" + id + ", pw=" + pw + ", call_number=" + call_number + ", name=" + name
+				+ ", email=" + email + ", bonuscredit=" + bonuscredit + ", regdate=" + regdate + ", auth=" + auth
+				+ ", del=" + del + "]";
 	}
 	
 	
