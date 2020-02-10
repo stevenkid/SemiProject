@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<%@page import="member.MemberDao"%>
+<%@page import="db.DBConnection"%>
+>>>>>>> Sub_Master
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,6 +15,18 @@
 
 <h1>Index 페이지</h1>
 
+<<<<<<< HEAD
+=======
+<% DBConnection.initConnection(); %>
+<%-- 
+	MemberDao dao = MemberDao.getInstance();
+	boolean isS = dao.test();
+	
+	System.out.println(isS);
+
+
+--%>
+>>>>>>> Sub_Master
 
 <%
 	response.sendRedirect("main.jsp");
